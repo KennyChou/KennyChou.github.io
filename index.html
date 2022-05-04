@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -165,6 +165,82 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kennychou.github.io/2022/05/04/TamperMonkey-for-eBird-%E8%85%B3%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Kenny Chou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kenny BLOG">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/05/04/TamperMonkey-for-eBird-%E8%85%B3%E6%9C%AC/" class="post-title-link" itemprop="url">TamperMonkey for eBird 腳本</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2022-05-04 15:19:20 / 修改時間：16:24:22" itemprop="dateCreated datePublished" datetime="2022-05-04T15:19:20+08:00">2022-05-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前題提要"><a href="#前題提要" class="headerlink" title="前題提要"></a>前題提要</h1><p>因 eBird 的賞鳥紀行的功能開放，提供可透過網址抓取全部的 Checklist 記錄編號，有人提出是否可以寫程式一次抓取全部資料內，像 MYEBIRDDATA 的完整格式。</p>
+<blockquote><p><a target="_blank" rel="noopener" href="https://ebird.org/tripreport-internal/v1/locations/[TRIP">https://ebird.org/tripreport-internal/v1/locations/[TRIP</a> ID]</p>
+</blockquote>
+
+<p>因上一版 eBird for chrome extension 沒上架，造成安裝及更新上的不便，就想到好像有 Chrome extension 的工具是寫腳本，可以更改特定網頁的長相或者加功能，就進一步搜尋，找到 Tampermoneky 這個工具，然後順便 google 有沒別人寫好的 vuejs 版的範本，可以加以利用。</p>
+<h1 id="Tampermoneky-for-eBird-腳本"><a href="#Tampermoneky-for-eBird-腳本" class="headerlink" title="Tampermoneky for eBird 腳本"></a>Tampermoneky for eBird 腳本</h1><blockquote><p>先安裝 Chrome 外掛 <strong><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-TW">Tampernoneky</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-trip/raw/main/dist/ebird-trip.user.js">eBird 賞鳥紀行腳本</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-checklist/raw/main/dist/ebird-checklist.user.js">eBird 記錄清單腳本</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-track/raw/main/dist/ebird-track.user.js">eBird 軌跡腳本</a></strong></p>
+</blockquote>
+
+<p>安裝成功會要求輸入 eBird API 金鑰 跟先下載鳥名錄<br><img src="/images/ebird-trip-1.png"></p>
+<p>設定完後就會有<strong>下載</strong>功能按鈕<br><img src="/images/ebird-trip-2.png"></p>
+<p>已知問題: 清單內若有敏感性物種會無法取得。</p>
+<h2 id="相關連結"><a href="#相關連結" class="headerlink" title="相關連結"></a>相關連結</h2><p><a target="_blank" rel="noopener" href="https://www.facebook.com/chenching.chiu/posts/7894818330531965">相關 FB 討論</a><br><a target="_blank" rel="noopener" href="https://medium.com/@raymond96383/%E7%B0%A1%E5%96%AE%E7%9A%84-ebird-trip-summary-%E4%B8%8B%E8%BC%89%E5%B7%A5%E5%85%B7-e9929752748">簡單的 eBird Trip Report 下載工具</a><br><a href="(https://github.com/huangxubo23/tampermonkey-vue)">https://github.com/huangxubo23/tampermonkey-vue</a><br><a target="_blank" rel="noopener" href="https://documenter.getpostman.com/view/664302/S1ENwy59">eBird API</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
