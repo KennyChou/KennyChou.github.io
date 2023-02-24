@@ -15,10 +15,10 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"kennychou.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"kennychou.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="前題提要因 eBird 的賞鳥紀行的功能開放，提供可透過網址抓取全部的 Checklist 記錄編號，有人提出是否可以寫程式一次抓取全部資料內，像 MYEBIRDDATA 的完整格式。 https:&#x2F;&#x2F;ebird.org&#x2F;tripreport-internal&#x2F;v1&#x2F;locations&#x2F;[TRIP ID]   因上一版 eBird for chrome extension 沒上架，造成安裝及更新上">
 <meta property="og:type" content="article">
@@ -29,8 +29,10 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://kennychou.github.io/images/ebird-trip-1.png">
 <meta property="og:image" content="https://kennychou.github.io/images/ebird-trip-2.png">
+<meta property="og:image" content="https://kennychou.github.io/images/ebird-group-list.PNG">
+<meta property="og:image" content="https://kennychou.github.io/images/ebird-group-edit.PNG">
 <meta property="article:published_time" content="2022-05-04T07:19:20.000Z">
-<meta property="article:modified_time" content="2022-10-26T13:23:34.628Z">
+<meta property="article:modified_time" content="2023-02-24T04:17:18.897Z">
 <meta property="article:author" content="Kenny Chou">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://kennychou.github.io/images/ebird-trip-1.png">
@@ -51,6 +53,8 @@
 
 
 
+
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -60,8 +64,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切換導航欄" role="button">
         <span class="toggle-line"></span>
@@ -80,7 +84,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
     </div>
   </div>
 </div>
@@ -95,15 +99,9 @@
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -124,11 +122,11 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Kenny Chou</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
@@ -138,36 +136,24 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
+  <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/kennychou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;kennychou" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/kennychou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;kennychou" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:kennyc015+blog@gmail.com" title="E-Mail → mailto:kennyc015+blog@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:kennyc015+blog@gmail.com" title="E-Mail → mailto:kennyc015+blog@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
-
-
 
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="回到頂端">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -216,7 +202,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-10-26 21:23:34" itemprop="dateModified" datetime="2022-10-26T21:23:34+08:00">2022-10-26</time>
+      <time title="修改時間：2023-02-24 12:17:18" itemprop="dateModified" datetime="2023-02-24T12:17:18+08:00">2023-02-24</time>
     </span>
 
   
@@ -234,13 +220,14 @@
 </blockquote>
 
 <p>因上一版 eBird for chrome extension 沒上架，造成安裝及更新上的不便，就想到好像有 Chrome extension 的工具是寫腳本，可以更改特定網頁的長相或者加功能，就進一步搜尋，找到 Tampermoneky 這個工具，然後順便 google 有沒別人寫好的 vuejs 版的範本，可以加以利用。</p>
-<h1 id="Tampermoneky-for-eBird-腳本"><a href="#Tampermoneky-for-eBird-腳本" class="headerlink" title="Tampermoneky for eBird 腳本"></a>Tampermoneky for eBird 腳本</h1><blockquote><p>先安裝 Chrome 外掛 <strong><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-TW">TamperMoneky</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-trip/raw/main/dist/ebird-trip.user.js">eBird 賞鳥紀行腳本</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-checklist/raw/main/dist/ebird-checklist.user.js">eBird 記錄清單腳本</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-track/raw/main/dist/ebird-track.user.js">eBird 軌跡腳本</a></strong></p>
+<h1 id="Tampermoneky-for-eBird-腳本"><a href="#Tampermoneky-for-eBird-腳本" class="headerlink" title="Tampermoneky for eBird 腳本"></a>Tampermoneky for eBird 腳本</h1><blockquote><p>先安裝 Chrome 外掛 <strong><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-TW">TamperMoneky</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-trip/raw/main/dist/ebird-trip.user.js">eBird 賞鳥紀行腳本</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-checklist/raw/main/dist/ebird-checklist.user.js">eBird 記錄清單腳本</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-track/raw/main/dist/ebird-track.user.js">eBird 軌跡腳本</a></strong><br>安裝 <strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-users-group/raw/main/dist/ebird-users-group.user.js">eBird 群組分享</a></strong></p>
 </blockquote>
 
-<p>安裝成功會要求輸入 eBird API 金鑰 跟先下載鳥名錄<br><img src="/images/ebird-trip-1.png"></p>
+<p>安裝成功會要求輸入 <strong><a target="_blank" rel="noopener" href="https://ebird.org/api/keygen">eBird API 金鑰</a></strong> 跟先下載鳥名錄<br><img src="/images/ebird-trip-1.png"></p>
 <p>設定完後就會有<strong>下載</strong>功能按鈕<br><img src="/images/ebird-trip-2.png"></p>
 <p>已知問題: 清單內若有敏感性物種會無法取得。</p>
-<h2 id="相關連結"><a href="#相關連結" class="headerlink" title="相關連結"></a>相關連結</h2><p><a target="_blank" rel="noopener" href="https://www.facebook.com/chenching.chiu/posts/7894818330531965">相關 FB 討論</a><br><a target="_blank" rel="noopener" href="https://medium.com/@raymond96383/%E7%B0%A1%E5%96%AE%E7%9A%84-ebird-trip-summary-%E4%B8%8B%E8%BC%89%E5%B7%A5%E5%85%B7-e9929752748">簡單的 eBird Trip Report 下載工具</a><br><a href="(https://github.com/huangxubo23/tampermonkey-vue)">https://github.com/huangxubo23/tampermonkey-vue</a><br><a target="_blank" rel="noopener" href="https://documenter.getpostman.com/view/664302/S1ENwy59">eBird API</a></p>
+<p><img src="/images/ebird-group-list.PNG"><br><img src="/images/ebird-group-edit.PNG"></p>
+<h2 id="相關連結"><a href="#相關連結" class="headerlink" title="相關連結"></a>相關連結</h2><p><a target="_blank" rel="noopener" href="https://www.facebook.com/chenching.chiu/posts/7894818330531965">相關 FB 討論</a><br><a target="_blank" rel="noopener" href="https://medium.com/@raymond96383/%E7%B0%A1%E5%96%AE%E7%9A%84-ebird-trip-summary-%E4%B8%8B%E8%BC%89%E5%B7%A5%E5%85%B7-e9929752748">簡單的 eBird Trip Report 下載工具</a><br><a href="(https://github.com/huangxubo23/tampermonkey-vue)">https://github.com/huangxubo23/tampermonkey-vue</a><br><a target="_blank" rel="noopener" href="https://documenter.getpostman.com/view/664302/S1ENwy59">eBird API</a><br><a target="_blank" rel="noopener" href="https://ebird.org/api/keygen">eBird API Key 申請</a></p>
 
     </div>
 
@@ -279,7 +266,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fab fa-creative-commons-by"></i>
   </span>
@@ -292,11 +279,21 @@
   </footer>
 
   
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
-
 
 
 
