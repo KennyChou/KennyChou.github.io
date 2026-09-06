@@ -120,7 +120,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -146,6 +146,99 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://kennychou.github.io/2026/09/06/SILIC2-Mobile-%E9%87%8E%E7%94%9F%E5%8B%95%E7%89%A9%E8%81%B2%E9%9F%B3%E8%BE%A8%E8%AD%98-APP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Kenny Chou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kenny BLOG">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kenny BLOG">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/09/06/SILIC2-Mobile-%E9%87%8E%E7%94%9F%E5%8B%95%E7%89%A9%E8%81%B2%E9%9F%B3%E8%BE%A8%E8%AD%98-APP/" class="post-title-link" itemprop="url">SILIC2 Mobile 野生動物聲音辨識 APP</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+      
+
+      <time title="創建時間：2026-09-06 00:00:00 / 修改時間：17:42:17" itemprop="dateCreated datePublished" datetime="2026-09-06T00:00:00+08:00">2026-09-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>野外生態調查常常在深山、高山、離島等完全無網路訊號的環境進行，錄音帶回去才能分析，緩不濟急。</p>
+<p><strong>SILIC2 Mobile</strong> 將 <a target="_blank" rel="noopener" href="https://github.com/RedbirdTaiwan/silic2">RedbirdTaiwan&#x2F;silic2</a> 的聲學辨識演算法與模型移植到 Android 手機上，全程端側運算，不需連網、不需上傳雲端，錄音當下就能即時辨識。</p>
+<p><img src="/images/silic2/feature_graphic_1024x500.png"></p>
+<h1 id="核心特色"><a href="#核心特色" class="headerlink" title="核心特色"></a>核心特色</h1><ul>
+<li><strong>100% 離線辨識</strong>：麥克風收音、頻譜運算、AI 推論全部在手機上完成</li>
+<li><strong>演算法對齊上游 silic2</strong>：訊號處理參數與 Python 版一致，結果可互相比對驗證</li>
+<li><strong>支援 398 類野生動物聲音</strong>：涵蓋 279 種台灣鳥類、蛙類、哺乳類</li>
+<li><strong>物種篩選</strong>：可鎖定特定物種監聽（例如只抓海蟾蜍或特定貓頭鷹）</li>
+<li><strong>音檔匯入分析</strong>：其他錄音 App 也能透過分享功能丟進來離線批次辨識</li>
+<li><strong>一鍵匯出 CSV</strong>：時間戳記、物種、學名、頻率範圍、信心度，方便後續統計</li>
+<li><strong>彩虹頻譜圖</strong>：重現上游 silic2 的 Matplotlib rainbow 配色，即時視覺化聲景</li>
+</ul>
+<h1 id="畫面截圖"><a href="#畫面截圖" class="headerlink" title="畫面截圖"></a>畫面截圖</h1><p><img src="/images/silic2/01_home.png" alt="首頁"></p>
+<p><img src="/images/silic2/02_live_listening.png" alt="即時錄音辨識"></p>
+<p><img src="/images/silic2/03_detection_detail.png" alt="辨識結果詳細資訊"></p>
+<p><img src="/images/silic2/04_recordings_list.png" alt="錄音紀錄列表"></p>
+<p><img src="/images/silic2/05_species_filter.png" alt="物種篩選設定"></p>
+<p><img src="/images/silic2/06_confidence_settings.png" alt="信心度設定"></p>
+<h1 id="系統需求"><a href="#系統需求" class="headerlink" title="系統需求"></a>系統需求</h1><ul>
+<li>Android 8.0（API 26）以上</li>
+<li>麥克風錄音權限</li>
+<li>約 50 MB 儲存空間（含模型約 40 MB）</li>
+</ul>
+<h1 id="上游專案"><a href="#上游專案" class="headerlink" title="上游專案"></a>上游專案</h1><p>聲學辨識演算法與模型權重來自 <a target="_blank" rel="noopener" href="https://github.com/RedbirdTaiwan">RedbirdTaiwan（紅鳩團隊）</a> 的 <a target="_blank" rel="noopener" href="https://github.com/RedbirdTaiwan/silic2">silic2</a>，感謝團隊開源，以及所有提供聲音資料的研究者。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

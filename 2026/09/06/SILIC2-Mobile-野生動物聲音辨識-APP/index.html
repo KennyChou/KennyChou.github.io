@@ -20,27 +20,35 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"kennychou.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="第一版 WPA 網頁應用程式安裝方式手機開啟 https:&#x2F;&#x2F;bbs-taiwan.web.app 第二版 Android APP安裝方式Google Play 商店搜尋 ebbs, bbs taiwan* 或 臺灣繁殖鳥類調查器 https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id&#x3D;tw.ogv.tesri.taiwan.bbs.flutter_bbs_ta">
+    <meta name="description" content="前言野外生態調查常常在深山、高山、離島等完全無網路訊號的環境進行，錄音帶回去才能分析，緩不濟急。 SILIC2 Mobile 將 RedbirdTaiwan&#x2F;silic2 的聲學辨識演算法與模型移植到 Android 手機上，全程端側運算，不需連網、不需上傳雲端，錄音當下就能即時辨識。  核心特色 100% 離線辨識：麥克風收音、頻譜運算、AI 推論全部在手機上完成 演算法對齊上游 si">
 <meta property="og:type" content="article">
-<meta property="og:title" content="台灣繁殖鳥調查記錄器 eBBS Taiwan APP">
-<meta property="og:url" content="https://kennychou.github.io/2021/12/14/%E5%8F%B0%E7%81%A3%E7%B9%81%E6%AE%96%E9%B3%A5%E8%AA%BF%E6%9F%A5%E8%A8%98%E9%8C%84%E5%99%A8-eBBS-Taiwan-APP/">
+<meta property="og:title" content="SILIC2 Mobile 野生動物聲音辨識 APP">
+<meta property="og:url" content="https://kennychou.github.io/2026/09/06/SILIC2-Mobile-%E9%87%8E%E7%94%9F%E5%8B%95%E7%89%A9%E8%81%B2%E9%9F%B3%E8%BE%A8%E8%AD%98-APP/">
 <meta property="og:site_name" content="Kenny BLOG">
-<meta property="og:description" content="第一版 WPA 網頁應用程式安裝方式手機開啟 https:&#x2F;&#x2F;bbs-taiwan.web.app 第二版 Android APP安裝方式Google Play 商店搜尋 ebbs, bbs taiwan* 或 臺灣繁殖鳥類調查器 https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id&#x3D;tw.ogv.tesri.taiwan.bbs.flutter_bbs_ta">
+<meta property="og:description" content="前言野外生態調查常常在深山、高山、離島等完全無網路訊號的環境進行，錄音帶回去才能分析，緩不濟急。 SILIC2 Mobile 將 RedbirdTaiwan&#x2F;silic2 的聲學辨識演算法與模型移植到 Android 手機上，全程端側運算，不需連網、不需上傳雲端，錄音當下就能即時辨識。  核心特色 100% 離線辨識：麥克風收音、頻譜運算、AI 推論全部在手機上完成 演算法對齊上游 si">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2021-12-14T05:50:49.000Z">
-<meta property="article:modified_time" content="2025-01-09T13:25:36.539Z">
+<meta property="og:image" content="https://kennychou.github.io/images/silic2/feature_graphic_1024x500.png">
+<meta property="og:image" content="https://kennychou.github.io/images/silic2/01_home.png">
+<meta property="og:image" content="https://kennychou.github.io/images/silic2/02_live_listening.png">
+<meta property="og:image" content="https://kennychou.github.io/images/silic2/03_detection_detail.png">
+<meta property="og:image" content="https://kennychou.github.io/images/silic2/04_recordings_list.png">
+<meta property="og:image" content="https://kennychou.github.io/images/silic2/05_species_filter.png">
+<meta property="og:image" content="https://kennychou.github.io/images/silic2/06_confidence_settings.png">
+<meta property="article:published_time" content="2026-09-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-09-06T09:42:17.032Z">
 <meta property="article:author" content="Kenny Chou">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kennychou.github.io/images/silic2/feature_graphic_1024x500.png">
 
 
-<link rel="canonical" href="https://kennychou.github.io/2021/12/14/%E5%8F%B0%E7%81%A3%E7%B9%81%E6%AE%96%E9%B3%A5%E8%AA%BF%E6%9F%A5%E8%A8%98%E9%8C%84%E5%99%A8-eBBS-Taiwan-APP/">
+<link rel="canonical" href="https://kennychou.github.io/2026/09/06/SILIC2-Mobile-%E9%87%8E%E7%94%9F%E5%8B%95%E7%89%A9%E8%81%B2%E9%9F%B3%E8%BE%A8%E8%AD%98-APP/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://kennychou.github.io/2021/12/14/%E5%8F%B0%E7%81%A3%E7%B9%81%E6%AE%96%E9%B3%A5%E8%AA%BF%E6%9F%A5%E8%A8%98%E9%8C%84%E5%99%A8-eBBS-Taiwan-APP/","path":"2021/12/14/台灣繁殖鳥調查記錄器-eBBS-Taiwan-APP/","title":"台灣繁殖鳥調查記錄器 eBBS Taiwan APP"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://kennychou.github.io/2026/09/06/SILIC2-Mobile-%E9%87%8E%E7%94%9F%E5%8B%95%E7%89%A9%E8%81%B2%E9%9F%B3%E8%BE%A8%E8%AD%98-APP/","path":"2026/09/06/SILIC2-Mobile-野生動物聲音辨識-APP/","title":"SILIC2 Mobile 野生動物聲音辨識 APP"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>台灣繁殖鳥調查記錄器 eBBS Taiwan APP | Kenny BLOG</title>
+<title>SILIC2 Mobile 野生動物聲音辨識 APP | Kenny BLOG</title>
   
 
 
@@ -112,7 +120,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%89%88-WPA-%E7%B6%B2%E9%A0%81%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">第一版 WPA 網頁應用程式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%89%88-Android-APP"><span class="nav-number">2.</span> <span class="nav-text">第二版 Android APP</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E7%89%B9%E8%89%B2"><span class="nav-number">2.</span> <span class="nav-text">核心特色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%95%AB%E9%9D%A2%E6%88%AA%E5%9C%96"><span class="nav-number">3.</span> <span class="nav-text">畫面截圖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%B5%B1%E9%9C%80%E6%B1%82"><span class="nav-number">4.</span> <span class="nav-text">系統需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E6%B8%B8%E5%B0%88%E6%A1%88"><span class="nav-number">5.</span> <span class="nav-text">上游專案</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -161,7 +169,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://kennychou.github.io/2021/12/14/%E5%8F%B0%E7%81%A3%E7%B9%81%E6%AE%96%E9%B3%A5%E8%AA%BF%E6%9F%A5%E8%A8%98%E9%8C%84%E5%99%A8-eBBS-Taiwan-APP/">
+    <link itemprop="mainEntityOfPage" href="https://kennychou.github.io/2026/09/06/SILIC2-Mobile-%E9%87%8E%E7%94%9F%E5%8B%95%E7%89%A9%E8%81%B2%E9%9F%B3%E8%BE%A8%E8%AD%98-APP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,12 +182,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="台灣繁殖鳥調查記錄器 eBBS Taiwan APP | Kenny BLOG">
+      <meta itemprop="name" content="SILIC2 Mobile 野生動物聲音辨識 APP | Kenny BLOG">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          台灣繁殖鳥調查記錄器 eBBS Taiwan APP
+          SILIC2 Mobile 野生動物聲音辨識 APP
         </h1>
 
         <div class="post-meta-container">
@@ -189,15 +197,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
+      
 
-      <time title="創建時間：2021-12-14 13:50:49" itemprop="dateCreated datePublished" datetime="2021-12-14T13:50:49+08:00">2021-12-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-01-09 21:25:36" itemprop="dateModified" datetime="2025-01-09T21:25:36+08:00">2025-01-09</time>
+      <time title="創建時間：2026-09-06 00:00:00 / 修改時間：17:42:17" itemprop="dateCreated datePublished" datetime="2026-09-06T00:00:00+08:00">2026-09-06</time>
     </span>
 
   
@@ -210,9 +212,30 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="第一版-WPA-網頁應用程式"><a href="#第一版-WPA-網頁應用程式" class="headerlink" title="第一版 WPA 網頁應用程式"></a>第一版 WPA 網頁應用程式</h1><p>安裝方式<br>手機開啟 <a target="_blank" rel="noopener" href="https://bbs-taiwan.web.app/">https://bbs-taiwan.web.app</a></p>
-<h1 id="第二版-Android-APP"><a href="#第二版-Android-APP" class="headerlink" title="第二版 Android APP"></a>第二版 Android APP</h1><p>安裝方式<br>Google Play 商店搜尋 <strong>ebbs</strong>, <strong>bbs taiwan*</strong> 或 <strong>臺灣繁殖鳥類調查器</strong></p>
-<p><a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=tw.ogv.tesri.taiwan.bbs.flutter_bbs_taiwan_2022&hl=zh_TW&gl=TW">https://play.google.com/store/apps/details?id=tw.ogv.tesri.taiwan.bbs.flutter_bbs_taiwan_2022&amp;hl=zh_TW&amp;gl=TW</a></p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>野外生態調查常常在深山、高山、離島等完全無網路訊號的環境進行，錄音帶回去才能分析，緩不濟急。</p>
+<p><strong>SILIC2 Mobile</strong> 將 <a target="_blank" rel="noopener" href="https://github.com/RedbirdTaiwan/silic2">RedbirdTaiwan&#x2F;silic2</a> 的聲學辨識演算法與模型移植到 Android 手機上，全程端側運算，不需連網、不需上傳雲端，錄音當下就能即時辨識。</p>
+<p><img src="/images/silic2/feature_graphic_1024x500.png"></p>
+<h1 id="核心特色"><a href="#核心特色" class="headerlink" title="核心特色"></a>核心特色</h1><ul>
+<li><strong>100% 離線辨識</strong>：麥克風收音、頻譜運算、AI 推論全部在手機上完成</li>
+<li><strong>演算法對齊上游 silic2</strong>：訊號處理參數與 Python 版一致，結果可互相比對驗證</li>
+<li><strong>支援 398 類野生動物聲音</strong>：涵蓋 279 種台灣鳥類、蛙類、哺乳類</li>
+<li><strong>物種篩選</strong>：可鎖定特定物種監聽（例如只抓海蟾蜍或特定貓頭鷹）</li>
+<li><strong>音檔匯入分析</strong>：其他錄音 App 也能透過分享功能丟進來離線批次辨識</li>
+<li><strong>一鍵匯出 CSV</strong>：時間戳記、物種、學名、頻率範圍、信心度，方便後續統計</li>
+<li><strong>彩虹頻譜圖</strong>：重現上游 silic2 的 Matplotlib rainbow 配色，即時視覺化聲景</li>
+</ul>
+<h1 id="畫面截圖"><a href="#畫面截圖" class="headerlink" title="畫面截圖"></a>畫面截圖</h1><p><img src="/images/silic2/01_home.png" alt="首頁"></p>
+<p><img src="/images/silic2/02_live_listening.png" alt="即時錄音辨識"></p>
+<p><img src="/images/silic2/03_detection_detail.png" alt="辨識結果詳細資訊"></p>
+<p><img src="/images/silic2/04_recordings_list.png" alt="錄音紀錄列表"></p>
+<p><img src="/images/silic2/05_species_filter.png" alt="物種篩選設定"></p>
+<p><img src="/images/silic2/06_confidence_settings.png" alt="信心度設定"></p>
+<h1 id="系統需求"><a href="#系統需求" class="headerlink" title="系統需求"></a>系統需求</h1><ul>
+<li>Android 8.0（API 26）以上</li>
+<li>麥克風錄音權限</li>
+<li>約 50 MB 儲存空間（含模型約 40 MB）</li>
+</ul>
+<h1 id="上游專案"><a href="#上游專案" class="headerlink" title="上游專案"></a>上游專案</h1><p>聲學辨識演算法與模型權重來自 <a target="_blank" rel="noopener" href="https://github.com/RedbirdTaiwan">RedbirdTaiwan（紅鳩團隊）</a> 的 <a target="_blank" rel="noopener" href="https://github.com/RedbirdTaiwan/silic2">silic2</a>，感謝團隊開源，以及所有提供聲音資料的研究者。</p>
 
     </div>
 
@@ -226,14 +249,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/12/14/%E5%8C%97%E9%B3%A5%E4%BE%8B%E8%A1%8C-APP/" rel="prev" title="北鳥例行 -APP">
-                  <i class="fa fa-chevron-left"></i> 北鳥例行 -APP
+                <a href="/2022/05/04/TamperMonkey-for-eBird-%E8%85%B3%E6%9C%AC/" rel="prev" title="TamperMonkey for eBird 腳本">
+                  <i class="fa fa-chevron-left"></i> TamperMonkey for eBird 腳本
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/12/14/%E5%85%A9%E6%A3%B2%E5%BF%97%E5%B7%A5%E8%9B%99%E9%A1%9E%E8%AA%BF%E8%A8%98%E9%8C%84%E5%99%A8/" rel="next" title="兩棲志工蛙類調記錄器">
-                  兩棲志工蛙類調記錄器 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
