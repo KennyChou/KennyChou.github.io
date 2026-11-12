@@ -292,7 +292,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2026-11-12 20:15:47" itemprop="dateModified" datetime="2026-11-12T20:15:47+08:00">2026-11-12</time>
+      <time title="修改時間：2026-11-12 20:27:04" itemprop="dateModified" datetime="2026-11-12T20:27:04+08:00">2026-11-12</time>
     </span>
 
   
@@ -336,6 +336,10 @@
 <td>軌跡圖旁多一個「下載軌跡」按鈕，輸出 <code>.kml</code> 檔。</td>
 </tr>
 </tbody></table>
+<p>「我的清單」頁面裝好腳本後的樣子：每筆清單前有勾選框，日期旁有「複製 SID」按鈕。</p>
+<p><img src="/images/ebird-checklists-annotated.png" alt="我的清單頁面：勾選框與複製 SID 按鈕"></p>
+<p>含 GPS 軌跡的清單頁，軌跡圖下方會出現「下載軌跡」按鈕：</p>
+<p><img src="/images/ebird-track-annotated.png" alt="清單頁面的下載軌跡按鈕"></p>
 <p>Excel 欄位對應 eBird 官方匯出格式，包含物種、學名、數量、地點與座標、日期時間、調查方法、繁殖代碼和備註等，完整欄位請看<a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-kenny-dev#%E5%8C%AF%E5%87%BA%E6%AC%84%E4%BD%8D">專案說明</a>。</p>
 <p><code>.kml</code> 可以直接匯入 Google Earth、Google 我的地圖、Garmin BaseCamp &#x2F; Connect、OsmAnd 和 CalTopo。</p>
 <h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><h2 id="步驟-1：安裝-Tampermonkey"><a href="#步驟-1：安裝-Tampermonkey" class="headerlink" title="步驟 1：安裝 Tampermonkey"></a>步驟 1：安裝 Tampermonkey</h2><p>到 <a target="_blank" rel="noopener" href="https://www.tampermonkey.net/">Tampermonkey 官網</a>，選你的瀏覽器安裝。支援 Chrome、Edge、Firefox 和 Safari。</p>
@@ -345,6 +349,8 @@
 <h2 id="步驟-2：安裝-ebird-kenny-腳本"><a href="#步驟-2：安裝-ebird-kenny-腳本" class="headerlink" title="步驟 2：安裝 ebird-kenny 腳本"></a>步驟 2：安裝 ebird-kenny 腳本</h2><p>點下面的連結，Tampermonkey 會跳出安裝頁面，按「安裝」即可：</p>
 <p><strong><a target="_blank" rel="noopener" href="https://github.com/KennyChou/tampermonkey-ebird-kenny-dev/raw/refs/heads/main/ebird-kenny.user.js">ebird-kenny.user.js</a></strong></p>
 <p>如果點了只看到一頁程式碼，代表 Tampermonkey 沒有接手，請回頭確認步驟 1 的權限設定。</p>
+<p>裝好後，點瀏覽器工具列的 Tampermonkey 圖示，選「管理面板」，確認 <strong>ebird-kenny</strong> 的開關是開啟（綠色）：</p>
+<p><img src="/images/tampermonkey-dashboard-ebird.png" alt="管理面板中 ebird-kenny 已啟用"></p>
 <blockquote>
 <p>以前裝過四支舊腳本（ebird-trip、ebird-checklist、ebird-track、ebird-users-group）的話，請到 Tampermonkey 管理面板把它們關掉或刪除，避免跟新腳本重複。</p>
 </blockquote>
@@ -542,7 +548,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2026-11-12 20:06:06" itemprop="dateModified" datetime="2026-11-12T20:06:06+08:00">2026-11-12</time>
+      <time title="修改時間：2026-11-12 20:27:02" itemprop="dateModified" datetime="2026-11-12T20:27:02+08:00">2026-11-12</time>
     </span>
 
   
@@ -639,8 +645,7 @@
 <li>確認最左邊的開關是<strong>開啟</strong>（綠色）。</li>
 <li>之後有新版腳本時，Tampermonkey 會自動提示更新，按「更新」即可。</li>
 </ol>
-<!-- 圖：/images/tampermonkey/05-dashboard.png 管理面板中 froghome-import 已啟用 -->
-
+<p><img src="/images/tampermonkey-dashboard-froghome.png" alt="管理面板中 froghome-import 已啟用"></p>
 <h2 id="步驟-5：上傳記錄"><a href="#步驟-5：上傳記錄" class="headerlink" title="步驟 5：上傳記錄"></a>步驟 5：上傳記錄</h2><ol>
 <li>在手機蛙記錄 APP 產生下載記錄 Excel，傳到電腦。</li>
 <li>開啟兩棲上傳資料平台，進到「新增記錄蛙種」畫面。</li>
